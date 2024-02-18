@@ -1,6 +1,9 @@
 const express = require('express');
 
-const v1ApiRoutes = express.Router();
+const { BookingController } = require('../../controllers/index');
 
+const router = express.Router();
 
-module.exports = v1ApiRoutes;
+router.post('/bookings', BookingController.create);
+
+module.exports = router;
